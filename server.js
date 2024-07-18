@@ -9,11 +9,14 @@ app.use(bodyParser.json()); //Pick the data coming from the frontend and stores 
 
 const PORT=process.env.PORT || 3000;
 
+
+
 //Import the router files
 const userRoutes=require('./routes/userRoutes.js')
-
+const candidateRoutes=require('./routes/candidateRoutes.js')
 //Use the routers
 app.use('/',userRoutes);
+app.use('/',candidateRoutes);
 
 
 app.listen(PORT,function(){
