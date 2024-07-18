@@ -146,7 +146,7 @@ router.get('/vote/count', async (req, res) => {
 });
 
 // Get List of all candidates with only name and party fields
-router.get('/', async (req, res) => {
+router.get('/ListOfCandidates', async (req, res) => {
     try {
         // Find all candidates and select only the name and party fields, excluding _id
         const candidates = await Candidate.find({}, 'name party age -_id');
